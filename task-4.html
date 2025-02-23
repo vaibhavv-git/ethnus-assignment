@@ -3,83 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration</title>
+    <title>Hoverable Sidenav Buttons</title>
+
     <style>
         body {
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           height: 100vh;
-           margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .form {
-            margin-bottom: 15px;
+      
+        .sidebar {
+            display: flex;
+            height: 200px;
+            width: 500px;
+            border: solid 1px black;
+            margin-top: 250px;
         }
 
-        label {
-            display: inline-block;
-            width: 120px;
-            font-weight: bold;
-        }
-
-        input, select {
-            width: 200px;
-            padding: 5px;
-            margin-left: 10px;
-        }
-
-       
-
-        button:hover {
-            background-color: rgb(232, 232, 139);
+   
+        .button a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+            width: 20px;
+            height: 10px;
+            transition: width 0.3s;
         }
 
         
+        .button a:hover {
+            width: 100px;
+        }
+
+        
+
+       
+        .green { background-color: #009688; }
+        .blue { background-color: #2196F3; }
+        .red { background-color: #9a3e37; }
+        .gray { background-color: #555; }
+        
+        .button{
+            background-color: white;
+        }
+       
+        .content {
+            margin-left: 80px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
     </style>
 </head>
 <body>
-    <form id="registrationForm">
-        <div class="form">
-            <label>Full Name:</label>
-            <input type="text"  value="Vincent Maverick Durano">
-        </div>
 
-        <div class="form">
-            <label>Username:</label>
-            <input type="text"  value="Venz">
-        </div>
+<div class="sidebar">
+    <div class="button">
+        <a href="#" class="green"><span></span></a>
+        <a href="#" class="blue"><span></span></a>
+        <a href="#" class="red"><span></span></a>
+        <a href="#" class="gray"><span></span></a>
+    </div>
 
-        <div class="form">
-            <label>Password:</label>
-            <input type="Password"  value="dfasfaf">
-        </div>
+    <div class="content">
+        <h1>Hoverable Sidenav Buttons</h1>
+        <p>Hover over the buttons in the left side navigation to slide them out individually.</p>
+    </div>
+ </div>
 
-        <div class="form">
-            <label>Re-Password:</label>
-            <input type="Password"  value="dsdfdsf">
-        </div>
-
-        <div class="form">
-            <label>Address:</label>
-            <input type="text" value="Cebu, Philipphines">
-        </div>
-
-        <div class="form">
-            <label>Age:</label>
-            <input type="number" value="22">
-        </div>
-
-        <div class="form">
-            <label>Gender:</label>
-            <select>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-            </select>
-        </div>
-
-        <button >Save</button>
-    </form>
 </body>
 </html>
