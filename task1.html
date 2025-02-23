@@ -3,106 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<html>
-<head>
+    <title>Ethnus Layout</title>
     <style>
-        
-        .table {
-            border-collapse: separate;
-            border-spacing: 0;
-            width: 800px;
-            margin-bottom: 40px;
+        body {
+            margin: 0;
         }
-
-         th,td{
-            border: 2px solid black;
+        
+       
+        .header {
+            background-color: #c72b76;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .navbar {
+            background-color: #888888;
+            display: flex;
+            justify-content: flex-start;
             padding: 10px;
-            border-radius: 20px ;
-            background-color: #B0E0E0;
-            text-align: left;
         }
-
-         th {
-            font-size: 18px;
-        }
-
-        .shapes{
-            display: grid;
-            grid-template-columns: repeat(3, 100px);
-            gap: 20px;
-            padding: 20px;
-            justify-content: center;
-        }
-
-        .shape {
-            height: 50px;
-            border: 2px solid #257725;
-            border-radius: 5px;
-        }
-
-        .oval {
-            border-radius: 50%;
-        }
-
         
-        .container{
-            background-color:  #B0E0E0;
-            border-radius: 5px;
-            width: fit-content;
-            height: 170px;
-            margin-left: 25%;
-            margin-right: 25%;
-            margin-top: 10%;
-            border: solid;
-            border-left: none;
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
         }
+        
+        .navbar .right-nav {
+            margin-left: auto;
+            margin-top: 10px;
+        }
+        
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            display: flex;
+            height: 80vh;
+        }
+
+        .main-content {
+            flex: 3;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: #555;
+            color: white;
+            padding: 20px;
+        }
+        
     </style>
 </head>
 <body>
-   
-<div class="container">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Age</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Jill</td>
-                <td>Smith</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>Eve</td>
-                <td>Jackson</td>
-                <td>94</td>
-            </tr>
-            <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>80</td>
-            </tr>
-        
-        </tbody>
-   
-    </table>
-</div>
-
-    <div class="shapes">
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape oval"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
+    <div class="header">
+        <h2>Ethnus layout</h2>
+    </div>
+    <div class="navbar">
+        <a href="#">HOME</a>
+        <a href="#">MENU</a>
+        <a href="#">ABOUT</a>
+        <a href="#">CONTACT</a>
+        <div class="right-nav">
+            <a href="#">SIGNUP</a>
+            <a href="#">LOGIN</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main-content">
+            <p>Write your content here</p>
+        </div>
+        <div class="sidebar">
+            <p>This is</p>
+        </div>
     </div>
 </body>
 </html>
